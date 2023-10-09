@@ -130,15 +130,17 @@ table tr:nth-child(even)
     transform: rotate(315deg);
 }
 
-#editButton{
-    font-size: 12px;
+#editButton, #confirmEdit {
+    font-size: 16px;
     border-radius: 4px;
     color: white;
     background-color: #4CAF50;
+    padding: 12px 28px;
 }
-#deleteButton {
-    font-size: 12px;
+#deleteButton, #cancelEdit {
+    font-size: 16px;
     border-radius: 4px;
     color: white;
     background-color: #f44336;
+    padding: 12px 28px;
 }
