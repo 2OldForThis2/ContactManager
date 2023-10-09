@@ -129,3 +129,16 @@ table tr:nth-child(even)
     background: gray;
     transform: rotate(315deg);
 }
+
+#editButton{
+    font-size: 12px;
+    border-radius: 4px;
+    color: white;
+    background-color: #4CAF50;
+}
+#deleteButton {
+    font-size: 12px;
+    border-radius: 4px;
+    color: white;
+    background-color: #f44336;
+}
