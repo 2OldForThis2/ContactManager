@@ -136,6 +136,10 @@ table tr:nth-child(even)
     color: white;
     background-color: #4CAF50;
     padding: 12px 28px;
+    border: none;
+}
+#confirmEdit {
+    background-color: #004F2D;
 }
 #deleteButton, #cancelEdit {
     font-size: 16px;
@@ -143,4 +147,8 @@ table tr:nth-child(even)
     color: white;
     background-color: #f44336;
     padding: 12px 28px;
+    border: none;
+}
+#cancelEdit {
+    background-color: #EE8434;
 }
