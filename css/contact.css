@@ -139,7 +139,7 @@ table tr:nth-child(even)
     border: none;
 }
 #confirmEdit {
-    background-color: #004F2D;
+    background-color: #C1FF9B;
 }
 #deleteButton, #cancelEdit {
     font-size: 16px;
