@@ -30,6 +30,7 @@ signupButton.addEventListener('click',()=>{
         })
         .then((data) =>{
             console.log("here we go")
+            console.log(data.error)
             if (data.error == "") {
                 window.location.href = "http://cop4331groupfifteen.xyz/login_page.html";
             }

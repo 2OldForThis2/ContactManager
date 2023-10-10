@@ -15,16 +15,17 @@
         $stmt->execute();
 
         $result = $stmt->get_result();
+        $rowCount = mysqli_num_rows($result);
 
-        if($result->fetch_assoc()){
-            returnWithError("Username Already Exists");
-        }
-        else{
+        if($rowCount == 0){
             $stmt = $conn->prepare("INSERT INTO Users (FirstName, LastName, Username, Password) VALUES (?,?,?,?)");
             $stmt->bind_param("ssss", $input["firstname"], $input["lastname"], $input["username"], $input["password"]);
             $stmt->execute();
             $id = $stmt->insert_id;
             returnWithInfo($id);
+        }
+        else{
+            returnWithError("Username Already Exists");
         }
         
     }
