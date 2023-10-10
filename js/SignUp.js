@@ -30,17 +30,11 @@ signupButton.addEventListener('click',()=>{
         })
         .then((data) =>{
             console.log("here we go")
-            if (data == "" || data == null){
+            if (data.error == "") {
                 window.location.href = "http://cop4331groupfifteen.xyz/login_page.html";
-            }
-            else if (data.error == "" || data.error == null) {
-                window.location.href = "http://cop4331groupfifteen.xyz/login_page.html";
-            }
-            else if (data.error != "") {
-                signUpError.innerHTML= "Username already exists";
             }
             else {
-                window.location.href = "http://cop4331groupfifteen.xyz/login_page.html";
+                signUpError.innerHTML= "Username Already Exists."
             }
         })
         .catch((error)=>{
@@ -49,7 +43,7 @@ signupButton.addEventListener('click',()=>{
 });
 // needs a Javascript object
 function signUp(info){
-    if(info == ""){
+    if(info.error == ""){
         window.location.href = "http://cop4331groupfifteen.xyz/login_page.html";
     }
     else{
