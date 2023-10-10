@@ -30,8 +30,8 @@ signupButton.addEventListener('click',()=>{
         })
         .then((data) =>{
             console.log("here we go")
-            console.log(data.error)
-            if (data.error == "") {
+            let info = JSON.parse(data);
+            if (info.error == "") {
                 window.location.href = "http://cop4331groupfifteen.xyz/login_page.html";
             }
             else {
