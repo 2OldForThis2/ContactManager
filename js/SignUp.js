@@ -30,11 +30,14 @@ signupButton.addEventListener('click',()=>{
         })
         .then((data) =>{
             console.log("here we go")
-            if (data == ""){
+            if (data == "" || data == null){
                 window.location.href = "http://cop4331groupfifteen.xyz/login_page.html";
             }
-            else {
+            else if (data.error != "") {
                 signUpError.innerHTML= "Username already exists";
+            }
+            else {
+                window.location.href = "http://cop4331groupfifteen.xyz/login_page.html";
             }
         })
         .catch((error)=>{
